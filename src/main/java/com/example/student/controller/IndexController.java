@@ -2,6 +2,7 @@ package com.example.student.controller;
 
 import com.example.student.api.dto.Student;
 import com.example.student.api.service.StudentService;
+import com.example.student.aspect.InsertLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +27,7 @@ public class IndexController {
         return studentService.addStudent(student);
     }
     @PostMapping("/selectStudent")
+    @InsertLog
     public List<Student> selectStudent(@RequestBody Student student){
         return studentService.selectStudent(student);
     }
