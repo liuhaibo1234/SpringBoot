@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    name: aliCloudDataBase_1  #数据库名
+    url: jdbc:mysql://8.142.149.42:3306/aliCloudDataBase_1?characterEncodeing=UTF-8&useSSL=false #url
+    username: root  #用户名
+    password: 123456  #密码
+    driver-class-name: com.mysql.jdbc.Driver  #数据库链接驱动
+
+mybatis:
+      mapper-locations: classpath:mapper/*.xml  #配置映射文件
+server:
+    port: 8081
